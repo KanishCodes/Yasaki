@@ -1,0 +1,126 @@
+.play-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.play-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #74a6f1;
+  color: #333;
+  line-height: 1.6;
+}
+
+.play-page .play-header {
+  background-color: #c3dbed;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.play-page .page-title {
+  font-size: 2.5rem;
+  color: rgb(50, 36, 6);
+  font-weight: 700;
+}
+
+.play-page .games-intro-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.play-page .intro-text {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.play-page .games-section {
+  padding: 40px 20px;
+  background: url('/Appetizers/neela.webp');
+}
+
+.play-page .section-title {
+  font-size: 2rem;
+  color: #ff865c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.play-page .games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.play-page .game-card {
+  background-color: white;
+  border: 2px solid #ff865c;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+.play-page .game-card[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.play-page [data-animation="fade-in"] {
+  transform: translateY(20px);
+}
+
+.play-page [data-animation="slide-in"] {
+  transform: translateX(-20px);
+}
+
+.play-page .game-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.play-page .game-description {
+  padding: 15px;
+}
+
+.play-page .game-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.play-page .game-button {
+  margin-top: 10px;
+}
+
+.play-page .game-button a,
+.play-page .game-button link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff865c;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.play-page .game-button a:hover,
+.play-page .game-button link:hover {
+  background-color: #d75430;
+}
+
+.play-page .play-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff865c;
+  color: white;
+}
+
+.play-page .footer-text {
+  font-size: 1rem;
+}

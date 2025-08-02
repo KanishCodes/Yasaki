@@ -1,0 +1,548 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: center;  /* Center horizontally */
+  align-items: center; 
+}
+
+#welcome-message {
+  font-size: 1 rem;
+  font-weight: 700;
+  color: #f4a4a3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInMessage 1s ease-in-out;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+@keyframes fadeInMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Navbar Brand Styles */
+.navbar-brand {
+  font-family: 'Cursive', 'Arial', sans-serif; /* Custom Font */
+  font-size: 2.5rem; /* Larger Font */
+  font-weight: bold; /* Bold text */
+  color: #ff6347; /* Bright color (Tomato) */
+  letter-spacing: 3px; /* Slight letter spacing for elegance */
+  text-transform: uppercase; /* Uppercase letters */
+  position: relative; /* For positioning glow or other effects */
+  z-index: 2; /* Make sure brand text is above other elements */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Glowing effect */
+.navbar-brand::before {
+  content: '🍣'; /* Adding sushi emoji before brand name for fun */
+  position: absolute;
+  left: -77px; /* Adjust left position for the emoji */
+  font-size: 3rem;
+  animation: glow-animation 1s infinite alternate;
+}
+
+/* Hover effect */
+.navbar-brand:hover {
+  color: #fff; /* Change text color on hover */
+  text-shadow: 0 0 15px #ff6347, 0 0 30px #ff6347; /* Glowing effect */
+}
+
+/* Glowing animation */
+@keyframes glow-animation {
+  0% {
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+  }
+  100% {
+    text-shadow: 0 0 30px #ff6347, 0 0 40px #ff6347, 0 0 50px #ff6347;
+  }
+}
+
+/* Optional: Animated underline on hover */
+.navbar-brand:hover {
+  text-decoration: underline;
+  text-decoration-color: #ff6347; /* Underline color */
+  text-decoration-thickness: 3px; /* Thickness of the underline */
+}
+
+
+/* Marquee */
+.marquee-container.transparent {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  animation: fadeInMarquee 1s ease-in-out;
+  opacity: 0.9;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollMarquee 25s linear infinite;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes scrollMarquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff6347;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  .hero-section {
+  transform-style: preserve-3d;
+}
+
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Background image behind other elements */
+  background: rgba(255, 0, 0, 0.289);
+}
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+
+  transform: none !important;
+  scale: 1 !important;
+  transition: none !important;
+  will-change: auto;
+  backface-visibility: visible;
+}
+
+
+/* Hero Content Overlay */
+.hero-overlay {
+  position: relative;
+  z-index: 2; /* Above the background image */
+  text-align: center;
+  margin-top: 20vh; /* Adjust to vertically center content */
+}
+
+#interactive-heading {
+  font-size: 10rem;
+  color: #f12e10;
+  animation: glow 1.5s infinite alternate;
+
+}
+
+.hero-tagline {
+  font-size: 1.75rem;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff6347;
+  text-align: center;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff4500;
+  }
+  to {
+    text-shadow: 0 0 30px #ff6347;
+  }
+}
+
+
+/* Collage Section */
+.collage-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.collage-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.collage-item {
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: url('/Appetizers/gyoza.avif'), auto; /* Replace with your cursor icon */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px;
+  width: 250px;
+}
+
+.collage-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(255, 99, 71, 0.5);
+}
+
+/* Trivia Pop-up */
+.collage-item[data-trivia]:hover::after {
+  content: attr(data-trivia);
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  top: -40px;
+  left: 0;
+  white-space: nowrap;
+}
+
+/* Chef's Recommendations Slider */
+.slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  min-width: 100%;
+  transition: transform 0.8s ease;
+  perspective: 1000px;
+  margin-left: 380px;
+}
+
+.slider img {
+  width: 500px;
+  border-radius: 8px;
+  height:550px;
+}
+/* Chef's Picks Section */
+.chef-picks {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  padding: 50px;
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the section itself */
+}
+
+/* Heading Styles */
+.chef-picks h2 {
+  font-family: 'Poppins', sans-serif; /* Custom font */
+  font-size: 3.5rem; /* Larger heading */
+  font-weight: 700; /* Bold font */
+  color: #ff6347; /* Tomato color */
+  text-transform: uppercase; /* Uppercase letters */
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  animation: headingGlow 1.5s infinite alternate; /* Glow animation */
+}
+
+/* Heading Glow Animation */
+@keyframes headingGlow {
+  0% {
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+  }
+  100% {
+    text-shadow: 0 0 30px #ff6347, 0 0 40px #ff6347, 0 0 50px #ff6347;
+  }
+}
+
+/* Optional: Chef’s Picks Card Style */
+.chef-picks-card {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chef-picks-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.chef-picks-card .card-content {
+  padding: 15px;
+}
+
+.chef-picks-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Chef’s Picks Cards Layout (Flexbox) */
+.chef-picks-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+
+/* About Section */
+#about-section {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+.about-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-image img {
+  width: 300px;
+  border-radius: 10px;
+  height: 450px;
+}
+
+/* Gamification */
+#hidden-sushi {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 50px;
+  cursor: pointer;
+}
+
+/* Quiz Widget */
+#quiz-widget {
+  text-align: center;
+  padding: 40px 20px;
+  background: url('/images/index/pattern.jpg');
+  border-radius: 10px;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(255, 99, 71, 0.4);
+}
+
+#quiz-widget h2 {
+  font-size: 2.5rem;
+  color: #7d0606;
+  margin-bottom: 20px;
+  animation: fadeInTitle 1s ease-out;
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: fadeInQuiz 1s ease-out;
+}
+
+@keyframes fadeInQuiz {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.cta-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ff4500;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff4500;
+}
+
+.btn-primary {
+  margin: 20px 0;
+}
+
+#quiz-form select,
+#quiz-form button {
+  margin: 10px 0;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#quiz-form select {
+  background-color: #c60909;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+#quiz-form select:hover {
+  background-color: #52190f;
+}
+
+#quiz-form button {
+  background-color: #521004;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+#quiz-form button:hover {
+  transform: scale(1.05);
+  background-color: #ff4500;
+}
+
+/* Result Styling */
+#quiz-result {
+  margin-top: 20px;
+  font-size: 1.75rem;
+  color: #0e340a;
+  font-weight: 600;
+  text-transform: capitalize;
+  opacity: 0;
+  animation: fadeInResult 1.5s ease-out 1s forwards;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@keyframes fadeInResult {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Animated Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #bc1405;
+  border-radius: 25px;
+  color: #ecdfdf;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(255, 69, 0, 0.4);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  background: #ff6347;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+
+.icons i {
+  margin: 0 5px;
+  color: #ff6347;
+  transition: color 0.3s;
+}
+
+.icons i:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #interactive-heading {
+    font-size: 3rem;
+  }
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  #about-section {
+    flex-direction: column;
+  }
+  .slider {
+    height: 200px;
+  }
+  .slide img {
+    object-fit: contain;
+  }
+}

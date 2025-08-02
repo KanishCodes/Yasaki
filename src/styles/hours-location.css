@@ -1,0 +1,115 @@
+.hours-location-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('/images/hoursAndLoc/pinky.webp');
+  color: #fff;
+}
+
+/* Navbar */
+.hours-location-page .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hours-location-page .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6347;
+}
+
+.hours-location-page .navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.hours-location-page .navbar-nav .nav-link {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hours-location-page .navbar-nav .nav-link:hover,
+.hours-location-page .navbar-nav .nav-link.active {
+  color: #ff4500;
+}
+
+/* Location Section */
+.hours-location-page .location-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.hours-location-page .location-info {
+  max-width: 500px;
+  text-align: center;
+}
+
+.hours-location-page .location-info h1 {
+  font-size: 4rem;
+  color: #d10b57;
+  text-shadow: 0 0 10px #fba6e2, 0 0 20px #fbb6dd;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hours-location-page .location-info p {
+  font-size: 1.23rem;
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.hours-location-page .hours h2 {
+  font-size: 1.98rem;
+  color: #420432;
+  margin-top: 20px;
+}
+
+.hours-location-page .hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.hours-location-page .hours li {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 10px 0;
+  color: #fdfdfd;
+}
+
+/* Map */
+.hours-location-page .map-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 99, 71, 0.2);
+}
+
+/* Footer */
+.hours-location-page footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+}
+
+.hours-location-page footer .icons i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #ff4500;
+  transition: color 0.3s ease;
+}
+
+.hours-location-page footer .icons i:hover {
+  color: #fff;
+}

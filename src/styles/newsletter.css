@@ -1,0 +1,171 @@
+/* Newsletter Page Scoped Styles */
+.newsletter-page {
+  height: 110vh;
+  overflow: hidden;
+  background-image: url('/images/newsletter/news.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* General Styles */
+.newsletter-page * {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+.newsletter-container {
+  width: 1000px;
+  max-width: 1000px;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Header Styles */
+.newsletter-header {
+  width: 1300px;
+  background: linear-gradient(to right, #00000066, #000000, rgba(0, 0, 0, 0.486));
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.newsletter-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #f4f2e2;
+  text-shadow: 0 4px 6px rgb(6, 0, 0);
+  letter-spacing: 2px;
+  font-family: 'Georgia', serif;
+}
+
+.newsletter-header p {
+  margin: 5px 0 0;
+  font-size: 0.8rem;
+  color: #ffe0c4;
+  font-style: italic;
+}
+
+/* Newsletter Pages */
+.newsletter {
+  position: relative;
+  width: 100%;
+  height: 75%;
+  background: #1a1a1a;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  perspective: 900px;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #2b2b2b, #1a1a1a);
+  opacity: 0.98;
+  border: 2px solid #242321;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  font-size: 23px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  backface-visibility: hidden;
+  transform-origin: left;
+  transition: transform 0.8s, opacity 0.4s ease-in-out;
+}
+
+.page h2 {
+  margin: 0 0 15px;
+  font-size: 1.5rem;
+  color: #ebe1db;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #564d4b;
+  padding-bottom: 5px;
+  font-family: 'Georgia', serif;
+}
+
+.page ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: square;
+  color: #ffe0c4;
+}
+
+.page ul li {
+  margin: 3px 0;
+}
+
+.page p {
+  line-height: 1.6;
+  color: #ffe0c4;
+  text-align: center;
+}
+
+.page img {
+  width: 270px;
+  height: 210px;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  border: 3px solid #d4af37;
+}
+
+/* Flip Shadow Effect */
+.page:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 99, 71, 0.4);
+}
+
+/* Controls */
+.controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: #280803;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #ee835c;
+  transform: scale(1.1);
+  color: #000000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .newsletter-container {
+    height: 90%;
+  }
+
+  .newsletter-header h1 {
+    font-size: 2rem;
+  }
+
+  .page h2 {
+    font-size: 1.5rem;
+  }
+
+  .page p {
+    font-size: 0.9rem;
+  }
+}
