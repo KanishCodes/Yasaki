@@ -1,0 +1,132 @@
+.tatami-page {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 20px;
+  background-color: #631005;
+  font-size: larger;
+  font-weight: bolder;
+}
+.tatami-header {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+  color: #000000;
+}
+
+.tatami-header h1,
+.tatami-header h2 {
+  position: relative;
+  z-index: 1;
+  color: #0e0601ec;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.tatami-header::before {
+  content: "";
+  background-image: url('/tatami 2/ttbg.jpg'); /* Ensure this is in public folder */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.description {
+  overflow-wrap: break-word;
+  padding: 20px;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+.room-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.room-card {
+  background-color: #ffffffd7;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 2px 6px rgb(255, 255, 255);
+  transition: transform 0.3s;
+}
+
+.room-card img {
+  width: 225px;
+  height: 235px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.room-card:hover {
+  transform: scale(1.15);
+}
+
+.form-heading {
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+}
+
+form {
+  background-color: rgba(244, 234, 234, 0.8);
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(239, 232, 232, 0.788);
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+input,
+select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #b64c05;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}

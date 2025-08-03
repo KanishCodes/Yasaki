@@ -1,0 +1,65 @@
+.sushi-maker-page {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url('https://i.pinimg.com/564x/07/80/37/078037567e7bd600796cc30ef0850b00.jpg');
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sushi-maker-page h1 {
+  color: #2c0803;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+.sushi-maker-page .ingredients {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 60px;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.sushi-maker-page .ingredient {
+  margin: 10px;
+  padding: 10px;
+  background-color: #ef90ae41;
+  border: 3px solid #731104;
+  border-radius: 8px;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.sushi-maker-page .ingredient:active {
+  cursor: grabbing;
+}
+
+.sushi-maker-page .ingredient:hover {
+  transform: scale(1.1);
+}
+
+.sushi-maker-page .plate {
+  margin: 0 auto;
+  width: 370px;
+  height: 370px;
+  background-color: #ef90ae41;
+  border: 4px dashed #731104;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e0e0e;
+  transition: background-color 0.3s;
+}
+
+.sushi-maker-page .plate p {
+  font-size: 28px;
+  margin: 0;
+  padding: 20px;
+}
+
+.sushi-maker-page .plate.dropover {
+  background-color: #f1276776;
+}

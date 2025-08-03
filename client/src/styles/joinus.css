@@ -1,0 +1,120 @@
+.join-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url(/images/joinUs/join.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.join-page .team-container {
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.join-page .team-header {
+  background: rgb(88, 7, 7);
+  color: #f08383;
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.join-page .team-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.join-page .team-header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Team Info Section */
+.join-page .team-info {
+  padding: 20px;
+  font-weight: 500;
+}
+
+.join-page .team-info h2 {
+  color: #861c09;
+  font-size: 1.75rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.join-page .team-info ul {
+  list-style: disc;
+  margin: 10px 0 0 20px;
+  font-weight: 500;
+}
+
+.join-page .team-info li {
+  margin-bottom: 8px;
+}
+
+/* Apply Now Section */
+.join-page .apply-now {
+  background: #f0722ea2;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.join-page .apply-now h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.join-page .form-group {
+  margin-bottom: 15px;
+}
+
+.join-page .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.join-page .form-group input,
+.join-page .form-group select,
+.join-page .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.join-page .form-group textarea {
+  resize: none;
+}
+
+.join-page .submit-button {
+  background: #e14023;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.join-page .submit-button:hover {
+  background: #b81904;
+}

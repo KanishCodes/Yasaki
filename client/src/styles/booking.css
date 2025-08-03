@@ -1,0 +1,163 @@
+/* General Styles */
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6347;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+
+.hero-overlay {
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay h1 {
+  font-size: 4rem;
+  animation: fadeInText 4s ease-out;
+  color: #cff633;
+  font-weight: bolder;
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  margin-top: 7px;
+  animation: fadeInText 3s ease-out;
+}
+
+/* Smooth Scroll Animation */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Table Map Section */
+.table-map-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.table-map {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.table {
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #222;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.table:hover {
+  transform: scale(1.05);
+}
+
+.table.available {
+  background-color: #28a745;
+}
+
+.table.booked {
+  background-color: #dc3545;
+}
+
+.table-info {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Booking Form Section */
+.booking-form-section {
+  background: url('/public/images/bookUsUp/formsBG.avif') no-repeat center center/cover;
+  padding: 40px 0;
+  color: #000;
+  text-align: center;
+}
+
+.booking-form-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form input,
+form select,
+form button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+}
+
+form .btn-primary {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+}
+
+form .btn-primary:hover {
+  background-color: #ff4500;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-map {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-form-section {
+    padding: 20px;
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

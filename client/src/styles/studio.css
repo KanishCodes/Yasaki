@@ -1,0 +1,118 @@
+/* Studio Page Styles */
+.studio-page body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.studio-page .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.studio-page .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6347;
+}
+
+.studio-page .navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.studio-page .navbar-nav .nav-link {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.studio-page .navbar-nav .nav-link:hover,
+.studio-page .navbar-nav .nav-link.active {
+  color: #ff4500;
+}
+
+/* Gallery Section */
+.studio-page .gallery-section {
+  padding: 40px 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.studio-page .gallery-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff6347;
+}
+
+.studio-page .gallery-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.studio-page .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.studio-page .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.studio-page .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.studio-page .gallery-item.tall {
+  grid-row: span 2;
+}
+
+.studio-page .gallery-item.wide {
+  grid-column: span 2;
+}
+
+.studio-page .gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+.studio-page footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+}
+
+.studio-page footer .icons i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #ff4500;
+  transition: color 0.3s ease;
+}
+
+.studio-page footer .icons i:hover {
+  color: #fff;
+}

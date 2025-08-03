@@ -1,0 +1,14 @@
+# Ignore all node_modules folders
+node_modules/
+
+# Vite build output and cache
+dist/
+.vite/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables file (very important for security)
+.env

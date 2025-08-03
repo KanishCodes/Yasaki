@@ -1,0 +1,152 @@
+.meetus-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Header Section */
+.meetus-page .header-section {
+  position: relative;
+  height: 75vh;
+  background-image: url('/images/meetUs/main kitchen.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meetus-page .main-heading {
+  font-size: 6rem;
+  color: #efb216;
+  background-color: rgba(15, 9, 9, 0.159);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  animation: fadeInDown 2s ease-out;
+}
+
+/* Countdown Section */
+.meetus-page .countdown-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-image: linear-gradient(rgb(247, 204, 14), #f6b205, rgb(255, 183, 0), rgb(219, 189, 17), black);
+}
+
+.meetus-page .countdown-left {
+  flex: 1;
+  text-align: left;
+}
+
+.meetus-page .countdown-section h2 {
+  font-size: 3.5rem;
+  color: #f3081f;
+  margin-bottom: 10px;
+  font-weight: 750;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.meetus-page #countdown-timer {
+  font-size: 2rem;
+  color: #066f1a;
+  font-weight: 600;
+}
+
+.meetus-page .countdown-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.meetus-page .countdown-right img {
+  width: 390px;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .meetus-page .countdown-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .meetus-page .countdown-left,
+  .meetus-page .countdown-right {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .meetus-page .countdown-right img {
+    max-width: 80%;
+  }
+}
+
+/* Team Section */
+.meetus-page .team-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.meetus-page .team-section h2 {
+  font-size: 3.5rem;
+  color: #f9d713;
+  margin-bottom: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.meetus-page .team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.meetus-page .team-member {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.meetus-page .team-member:hover {
+  transform: translateY(-10px);
+}
+
+.meetus-page .team-member img {
+  width: 225px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.meetus-page .team-member h3 {
+  color: #c4ef17;
+  font-size: 2.05rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.meetus-page .team-member p {
+  font-size: 1.15rem;
+  color: #ccc;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

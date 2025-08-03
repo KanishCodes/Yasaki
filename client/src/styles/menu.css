@@ -1,0 +1,250 @@
+.menu-page {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.menu-page .back-button-container {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.menu-page .back-button-container button {
+  background-color: #222;
+  color: #f4e4e4;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.menu-page .menu-heading {
+  position: relative;
+  background-image: url('/public/images/menu/mainGirl.jpg');
+  background-size: cover;
+  background-position: center center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(203, 24, 24, 0.1);
+  margin-bottom: 20px;
+  color: rgb(248, 211, 130);
+  height: 400px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 5rem;
+  padding-top: 265px;
+  text-align: center;
+}
+
+.menu-page .menu-socialmedia,
+.menu-page .reservations {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 15px 0;
+  color: #eddcdc;
+}
+
+.menu-page .button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 10px;
+}
+
+.menu-page .button-container button {
+  background-color: #020a03d7;
+  color: #f4e4e4;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.menu-page .button-container button:hover {
+  box-shadow: 4px 3px 10px rgba(235, 245, 160, 0.7);
+}
+
+.menu-page .menu-section {
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 2px 15px white;
+  max-width: 1000px;
+}
+
+.menu-page .menu-section h2 {
+  font-size: 2rem;
+  color: #ba1b1b;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.menu-page .about-menu-sections {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.menu-page .menu-item {
+  border-bottom: 1px solid #eaeaea;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  animation: fadeIn 0.8s ease-out;
+  padding-bottom: 15px;
+}
+
+.menu-page .menu-item h3 {
+  color: #d24f2d;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.menu-page .menu-item-text {
+  font-size: 16px;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.menu-page .description {
+  margin-top: 5px;
+  color: #555;
+}
+
+.menu-page .dietary-info {
+  font-size: 0.9em;
+  color: #337c3a;
+}
+
+.menu-page .price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #d24f2d;
+}
+
+.menu-page img {
+  display: block;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  width: 140px;
+  height: auto;
+}
+
+.menu-page img:hover {
+  transform: scale(1.1);
+}
+
+.menu-page .add-to-cart {
+  background-color: #035f05;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-page .add-to-cart:hover {
+  background-color: #45a049;
+}
+
+.menu-page .cart-summary {
+  margin-top: 50px;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-page .cart-summary h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-page .cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-page .cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.menu-page .cart-total {
+  font-size: 1.5rem;
+  color: #d24f2d;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.menu-page .pay-now {
+  display: block;
+  margin: 0 auto;
+  background-color: #035f05;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.menu-page .pay-now:hover {
+  background-color: #45a049;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-page .menu-heading {
+    font-size: 3rem;
+    padding-top: 150px;
+  }
+
+  .menu-page .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-page .menu-item img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+
+  .menu-page .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
